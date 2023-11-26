@@ -5,7 +5,9 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack -c scripts/webpack.config.js"
+    "build": "webpack -c scripts/webpack.config.js ",
+    "watch": "webpack -c scripts/webpack.config.js --watch",
+    "start": "webpack serve -c scripts/webpack.config.js --open"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +16,8 @@
     "css-loader": "^6.8.1",
     "style-loader": "^3.3.3",
     "webpack": "^5.89.0",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
     "html-webpack-plugin": "^5.5.3",

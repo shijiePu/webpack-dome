@@ -4,12 +4,18 @@ const path = require("path")
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
-
-
 module.exports = {
+    mode: 'development',
     entry: {
         index: './src/index.js',
-        print: './src/print.js',
+    },
+    devtool: 'inline-source-map', // source-map
+    devServer: {
+        static: './dist',
+        hot: true
+    },
+    optimization: {
+        runtimeChunk: 'single',
     },
     output: {
         filename: "[name].bundle.js",
@@ -35,7 +41,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: '管理输出2',
+            title: 'Hot Module Replacement',
         }),
     ],
 }
