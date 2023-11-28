@@ -1,3 +1,11 @@
 import _ from 'lodash';
 
-console.log(_.join(['Another', 'module', 'loaded!'], ' '));
+
+function run() {
+    console.log(_.join(['Another', 'module', 'loaded!'], ' '));
+}
+
+
+
+
+export default run;

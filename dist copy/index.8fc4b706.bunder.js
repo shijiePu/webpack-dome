@@ -9,13 +9,13 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/indexImport.js":
-/*!****************************!*\
-  !*** ./src/indexImport.js ***!
-  \****************************/
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("// 使用动态导入的方式来分离代码\r\nfunction getComponent() {\r\n    return __webpack_require__.e(/*! import() */ \"vendors-node_modules_lodash_lodash_js\").then(__webpack_require__.t.bind(__webpack_require__, /*! lodash */ \"./node_modules/lodash/lodash.js\", 23))\r\n        .then(({ default: _ }) => {\r\n            const element = document.createElement('div');\r\n            element.innerHTML = _.join(['Hello', 'webpack'], ' ');\r\n            return element;\r\n        })\r\n        .catch((error) => 'An error occurred while loading the component');\r\n}\r\n\r\n\r\ngetComponent().then((component) => {\r\n    document.body.appendChild(component);\r\n});\n\n//# sourceURL=webpack://webpack-demo/./src/indexImport.js?");
+eval("// 使用动态导入的方式来分离代码\r\nfunction getComponent() {\r\n    return __webpack_require__.e(/*! import() */ \"vendors-node_modules_lodash_lodash_js\").then(__webpack_require__.t.bind(__webpack_require__, /*! lodash */ \"./node_modules/lodash/lodash.js\", 23))\r\n        .then(({ default: _ }) => {\r\n            const element = document.createElement('div');\r\n            element.innerHTML = _.join(['Hello', 'webpack'], ' ');\r\n            return element;\r\n        })\r\n        .catch((error) => 'An error occurred while loading the component');\r\n}\r\n\r\n\r\ngetComponent().then((component) => {\r\n    document.body.appendChild(component);\r\n});\n\n//# sourceURL=webpack://webpack-demo/./src/index.js?");
 
 /***/ })
 
@@ -112,8 +112,13 @@ eval("// 使用动态导入的方式来分离代码\r\nfunction getComponent() {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "" + chunkId + ".bunder.js";
+/******/ 			return "" + chunkId + "." + __webpack_require__.h().slice(0, 8) + ".bunder.js";
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/getFullHash */
+/******/ 	(() => {
+/******/ 		__webpack_require__.h = () => ("8fc4b7068b35fa4c0a8c")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
@@ -317,7 +322,7 @@ eval("// 使用动态导入的方式来分离代码\r\nfunction getComponent() {
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/indexImport.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
 /******/ 	
 /******/ })()
 ;
