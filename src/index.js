@@ -1,19 +1,8 @@
-import author from "./author"
+import math from "./math"
 
-// 使用动态导入的方式来分离代码
-function getComponent() {
-    return import('lodash')
-        .then(({ default: _ }) => {
-            const element = document.createElement('div');
-            element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-            return element;
-        })
-        .catch((error) => 'An error occurred while  loading the component');
-}
+const element = document.createElement('div');
+element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+document.body.appendChild(component);
 
+author();
 
-getComponent().then((component) => {
-    document.body.appendChild(component);
-}).then(() => {
-    author();
-});
